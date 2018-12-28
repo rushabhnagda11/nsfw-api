@@ -67,7 +67,7 @@ var options = { method: 'POST',
   url: 'http://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/',
   headers:
   { 'cache-control': 'no-cache',
-    Authorization: 'Basic ' + new Buffer('-EKLduz8hPIkw3GoVNalgIznrrSHkiMai66KaTWKi-e' + ":" + '').toString("base64"),
+    Authorization: 'Basic ' + new Buffer('REPLACE YOUR API KEY' + ":" + '').toString("base64"),
     'Content-Type': 'application/x-www-form-urlencoded' },
   form:
   { urls: 'https://goo.gl/ICoiHc',
