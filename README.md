@@ -37,7 +37,7 @@ curl --request POST --url 'https://app.nanonets.com/api/v2/ImageCategorization/L
 
 * Get your API key by signing up on app.nanonets.com
 
-### python
+#### python
 
 ```
 #REPLACE YOUR API KEY
@@ -56,6 +56,28 @@ response = requests.request('POST', url, headers=headers, auth=requests.auth.HTT
  
 print(response.text)
 
+```
+
+#### node
+
+```
+var request = require("request");
+
+var options = { method: 'POST',
+  url: 'http://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/',
+  headers:
+  { 'cache-control': 'no-cache',
+    Authorization: new Buffer(REPLACE_YOUR_API_KEY + ":" + '').toString("base64");,
+    'Content-Type': 'application/x-www-form-urlencoded' },
+  form:
+  { urls: 'https://goo.gl/ICoiHc',
+    modelId: '7390a500-9fe1-483b-8123-750b96fc660c' } };
+
+request(options, function (error, response,body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
 ```
 
 
