@@ -29,8 +29,33 @@ Following are the image categories we classify into NSFW categories.
 
 ### Query pretrained model.
 
+#### curl
+
 ```
-curl --request POST --url 'https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/' --header 'accept: application/x-www-form-urlencoded' -d 'modelId=7390a500-9fe1-483b-8123-750b96fc660c&urls=https://goo.gl/ICoiHc' -u '-EKLduz8hPIkw3GoVNalgIznrrSHkiMai66KaTWKi-e:'
+curl --request POST --url 'https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/' --header 'accept: application/x-www-form-urlencoded' -d 'modelId=7390a500-9fe1-483b-8123-750b96fc660c&urls=https://goo.gl/ICoiHc' -u '-REPLCAE_YOUR_API_KEY:'
 ```
 
-Get your API key by signing up on app.nanonets.com
+* Get your API key by signing up on app.nanonets.com
+
+### python
+
+```
+#REPLACE YOUR API KEY
+ 
+import requests
+ 
+url = 'https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/'
+ 
+headers = {
+  'accept': 'application/x-www-form-urlencoded'
+}
+ 
+data = {'modelId': '7390a500-9fe1-483b-8123-750b96fc660c', 'urls' : ['https://goo.gl/ICoiHc']}
+ 
+response = requests.request('POST', url, headers=headers, auth=requests.auth.HTTPBasicAuth('REPLACE_YOUR_API_KEY', ''), data=data)
+ 
+print(response.text)
+
+```
+
+
