@@ -6,7 +6,7 @@
 
 <h1 align="center">Nanonets NSFW API</h1>
 
-<a href="https://nanonets.com/objectdetection/"> <h3>Live demo</h3> </a>
+<a href="https://nanonets.com/content-moderation-api/"> <h3>Live demo</h3> </a>
 
 | [Golang Sample](https://repl.it/@RushabhNagda/go-example-url) | [Python Sample](https://repl.it/@RushabhNagda/go-example-url)| [Node.js Sample](https://repl.it/@RushabhNagda/go-example-url) |
 | -------------------------- |--------------------------|--------------------------|
