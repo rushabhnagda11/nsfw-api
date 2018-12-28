@@ -20,9 +20,15 @@
 
 We're classifying images into NSFW and SFW categories.
 
-Following are the images we classify into NSFW categories.
+Following are the image categories we classify into NSFW categories.
 * Porn
 * Explicit Nudity
 * Animated Porn
 * Suggestive Nudity
 * Gore
+
+### Query pretrained model.
+
+`curl --request POST --url 'https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/' --header 'accept: application/x-www-form-urlencoded' -d 'modelId=7390a500-9fe1-483b-8123-750b96fc660c&urls=https://goo.gl/ICoiHc' -u '-EKLduz8hPIkw3GoVNalgIznrrSHkiMai66KaTWKi-e:'`
+
+Get your API key by signing up on app.nanonets.com
