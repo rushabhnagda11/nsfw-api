@@ -29,13 +29,13 @@ Following are the image categories we classify into NSFW categories.
 
 ### Query pretrained model.
 
+* Get your API key by signing up on app.nanonets.com
+
 #### curl
 
 ```
 curl --request POST --url 'https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/' --header 'accept: application/x-www-form-urlencoded' -d 'modelId=7390a500-9fe1-483b-8123-750b96fc660c&urls=https://goo.gl/ICoiHc' -u '-REPLCAE_YOUR_API_KEY:'
 ```
-
-* Get your API key by signing up on app.nanonets.com
 
 #### python
 
