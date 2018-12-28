@@ -80,4 +80,44 @@ request(options, function (error, response,body) {
 });
 ```
 
+#### go
+
+```
+//REPLACE YOUR API KEY
+
+package main
+
+import (
+  "bytes"
+  "fmt"
+  "io/ioutil"
+  "net/http"
+  "net/url"
+)
+
+func main() {
+
+  labelUrl := "https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/"
+
+  data := url.Values{}
+  data.Set("modelId", "7390a500-9fe1-483b-8123-750b96fc660c")
+  data.Add("urls", "https://goo.gl/ICoiHc")
+
+  req, _ := http.NewRequest("POST", labelUrl, bytes.NewBufferString(data.Encode()))
+
+  req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+  req.SetBasicAuth("-REPLACE_YOUR_API_KEY", "")
+
+  res, _ := http.DefaultClient.Do(req)
+
+  defer res.Body.Close()
+  body, _ := ioutil.ReadAll(res.Body)
+
+  fmt.Println(res)
+  fmt.Println(string(body))
+
+}
+
+```
+
 
