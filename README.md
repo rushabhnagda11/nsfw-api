@@ -19,6 +19,7 @@
 
 
 We're classifying images into NSFW and SFW categories.
+
 Following are the images we classify into NSFW categories.
 * Porn
 * Explicit Nudity
